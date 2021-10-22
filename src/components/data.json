@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Mirai Nikki",
+        "typ": "Serie",
+        "score": 5,
+        "done": 1
+    },
+    {
+        "id": 2,
+        "name": "Sex Education",
+        "typ": "Serie",
+        "score": 0,
+        "done": 0
+    },
+    {
+        "id": 3,
+        "name": "Squid Game",
+        "typ": "Serie",
+        "score": 1,
+        "done": 1
+    },
+    {
+        "id": 4,
+        "name": "Kindsköpfe",
+        "typ": "Film",
+        "score": 4,
+        "done": 1
+    },
+    {
+        "id": 5,
+        "name": "Ready Player One",
+        "typ": "Film",
+        "score": 0,
+        "done": 0
+    }
+]

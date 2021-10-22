@@ -5,6 +5,9 @@
 npm install
 ```
 
+### What is the data.json file?
+The data.json is for testing and debugging.
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
