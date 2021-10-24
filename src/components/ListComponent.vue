@@ -1,17 +1,36 @@
 <template>
     <div class="list">
         <h3>Deine Liste:</h3>
-        <div v-for="item in dataJson" :key="item.id" class="list-element">
-            <h3>{{ item.name }}</h3>
-            <p>
-                <span>Typ:</span> {{ item.typ }}
-            </p>
-            <p>
-                <span>Bewertung:</span> {{ item.score }}
-            </p>
-            <p>
-                <span>Abgeschlossen?</span> {{ (item.done === 1) ? 'Ja' : 'Nein' }}
-            </p>
+        <div class="container">
+            <div v-for="item in dataJson" :key="item.id" class="list-element">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <div class="card" style="width: 100%; margin-bottom: 1em;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.name }}</h5>
+                                <p>
+                                    <span>Typ:</span> {{ item.typ }}
+                                </p>
+                                <p>
+                                    <span>Bewertung:</span> {{ item.score }}
+                                </p>
+                                <button v-if="item.done === 1" type="button" class="btn btn-secondary btn-sm">
+                                    <span class="material-icons" style="vertical-align: middle;">
+                                        radio_button_unchecked
+                                    </span>
+                                </button>
+                                <button v-else type="button" class="btn btn-success btn-sm" disabled>
+                                    <span class="material-icons" style="vertical-align: middle;">
+                                        check_circle_outline
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>  
         </div>
     </div>
 </template>
@@ -30,12 +49,7 @@ export default {
 </script>
 
 <style>
-    .list {
-        padding-top: 5em;
-        padding-bottom: 5em;
-    }
-    .list-element {
-        border: 1px solid #212121;
-        margin-bottom: 1em;
+    .card {
+        align-content: center;
     }
 </style>
